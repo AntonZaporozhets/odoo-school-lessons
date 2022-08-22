@@ -1,0 +1,30 @@
+Команди для запуску тестів:
+1) за допомогою odoo-bin
+-c /home/asuslik/odoo-15.0/conf/odoo.conf -d school_lesson_6_1_demo -i school_lesson_6_4 --test-tag=odooschool --log-level=test --stop-after-init
+
+2) за допомогою odoo-helper
+odoo-helper test -m school_lesson_6_4
+
+
+
+
+
+Лог з описом виконаних тестів та їх результатів:
+
+2022-08-22 23:08:10,179 114300 INFO school_lesson_6_1_demo odoo.service.server: Starting post tests 
+2022-08-22 23:08:10,181 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_access_rights: Starting TestAccessRights.test_01_library_user_access_rights ... 
+2022-08-22 23:08:10,342 114300 INFO school_lesson_6_1_demo odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 50, model: library.book 
+2022-08-22 23:08:10,346 114300 INFO school_lesson_6_1_demo odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 50, model: library.book 
+2022-08-22 23:08:10,350 114300 INFO school_lesson_6_1_demo odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 50, model: library.author 
+2022-08-22 23:08:10,352 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_access_rights: Starting TestAccessRights.test_02_library_admin_access_rights ... 
+2022-08-22 23:08:10,551 114300 INFO school_lesson_6_1_demo odoo.models.unlink: User #53 deleted library.book records with IDs: [30] 
+2022-08-22 23:08:10,640 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_actions: Starting TestAccessRights.test_action_archive_book ... 
+2022-08-22 23:08:10,794 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_actions: Starting TestAccessRights.test_action_take_in ... 
+2022-08-22 23:08:10,904 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_form: Starting TestForm.test_book_default_get ... 
+2022-08-22 23:08:11,009 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_form: Starting TestForm.test_book_taken_date ... 
+2022-08-22 23:08:11,223 114300 INFO school_lesson_6_1_demo odoo.addons.school_lesson_6_4.tests.test_http: Starting TestAccessRights.test_http ... 
+2022-08-22 23:08:11,276 114300 INFO school_lesson_6_1_demo odoo.addons.base.models.res_users: Login successful for db:school_lesson_6_1_demo login:library_user_http from n/a 
+2022-08-22 23:08:11,286 114300 INFO school_lesson_6_1_demo odoo.addons.base.models.ir_http: Generating routing map for key None 
+2022-08-22 23:08:11,631 114300 INFO school_lesson_6_1_demo werkzeug: 127.0.0.1 - - [22/Aug/2022 23:08:11] "GET /library/books HTTP/1.1" 200 - 46 0.023 0.323
+2022-08-22 23:08:11,635 114300 INFO school_lesson_6_1_demo odoo.service.server: 7 post-tests in 1.46s, 827 queries 
+2022-08-22 23:08:11,636 114300 INFO school_lesson_6_1_demo odoo.tests.runner: 0 failed, 0 error(s) of 7 tests when loading database 'school_lesson_6_1_demo' 
