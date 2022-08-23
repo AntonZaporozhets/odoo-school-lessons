@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="school_lesson_6_1.library_book_2" model="library.book">
+        <field name="name">Поклик предків (нова редакція)</field>
+    </record>
+    <delete id="school_lesson_6_1.library_book_3" model="library.book"/>
+
+</odoo>
